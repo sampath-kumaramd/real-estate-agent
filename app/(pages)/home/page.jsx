@@ -1,8 +1,12 @@
+import Navigation from '@/components/navigation'
 import React from 'react'
+
 
 function HomePage() {
   return (
-    <div>HomePage</div>
+    <div>
+      <Navigation/>
+    </div>
   )
 }
 
