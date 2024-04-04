@@ -1,9 +1,12 @@
-import React from 'react'
+import SubNavigation from "@/components/subNavigation";
+import React from "react";
 
 function Favorites() {
   return (
-    <div>Favorites</div>
-  )
+    <>
+      <SubNavigation title="Mine favoritboliger" />
+    </>
+  );
 }
 
-export default Favorites
+export default Favorites;

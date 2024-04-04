@@ -51,9 +51,8 @@ function Navigation({}) {
             height="10"
           />
         </div>
-
         <div className="flex gap-8 font-[14px]">
-          <Link href="/">Boliger til salg</Link>
+          <Link href="/property-list">Boliger til salg</Link>
           <Link href="/agents">Mæglere</Link>
           <Link href="/favorites">Mine favoritter</Link>
           <Link href="/contact-us">Kontakt os</Link>

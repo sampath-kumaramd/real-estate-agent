@@ -1,8 +1,11 @@
+import SubNavigation from '@/components/subNavigation'
 import React from 'react'
 
 function Agents() {
   return (
-    <div>Agents</div>
+    <>
+      <SubNavigation title="Medarbejdere i Roskilde" />
+    </>
   )
 }
 
