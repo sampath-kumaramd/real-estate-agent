@@ -1,14 +1,11 @@
-import Footer from "@/components/footer";
-import Navigation from "@/components/navigation";
 import React from "react";
 import Image from "next/image";
 
 function HomePage() {
   return (
     <div>
-      <Navigation />
       <div className="h-auto">
-        <div className="relative flex items-center justify-center h-[38rem]">
+        {/* <div className="relative flex items-center justify-center h-[38rem]">
           <Image
             src="/assets/Home-BG.jpg"
             alt="description_of_image"
@@ -76,9 +73,8 @@ function HomePage() {
               />
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
-      <Footer />
     </div>
   );
 }

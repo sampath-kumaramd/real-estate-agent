@@ -11,8 +11,7 @@ function SubNavigation({ title }) {
         height="36"
         className="absolute"
       />
-      <div className="absolute h-[9.5rem] inset-0 bg-blue-950 opacity-85"></div>
-      <div className="z-10 text-[3rem] text-white pt-5 font-bold">{title}</div>
+      <div className="z-10 text-[3rem] text-white font-bold">{title}</div>
     </div>
   );
 }
