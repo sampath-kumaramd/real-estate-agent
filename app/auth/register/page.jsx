@@ -1,9 +1,19 @@
-import React from 'react'
+import React from "react";
+import SubNavigationLogin from "@/components/subNavigationLogin";
+import { z } from "zod";
+import RegisterForm from "@/components/register/RegisterForm";
 
 function Register() {
   return (
-    <div>Register</div>
-  )
+    <div className="h-auto flex flex-col">
+      <div className="h-[20rem]">
+        <SubNavigationLogin title="Register" title2="Register" />
+      </div>
+      <div>
+        <RegisterForm />
+      </div>
+    </div>
+  );
 }
 
-export default Register
+export default Register;

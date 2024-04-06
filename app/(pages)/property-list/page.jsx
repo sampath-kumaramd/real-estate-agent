@@ -3,9 +3,9 @@ import React from 'react'
 
 function PropertyList() {
   return (
-    <>
+    <div className="h-screen">
       <SubNavigation title="Boliger til salg" />
-    </>
+    </div>
   )
 }
 

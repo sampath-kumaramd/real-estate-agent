@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-function SubNavigation({ title }) {
+function SubNavigation({ title}) {
   return (
     <div className="relative flex items-center justify-center h-36 mb-10">
       <Image

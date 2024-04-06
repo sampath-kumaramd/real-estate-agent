@@ -30,26 +30,30 @@ function Navigation({}) {
             </div>
           </div>
           <div className="flex">
-            <div className="flex gap-3">
-              <Image
-                src="/icons/user.png"
-                alt="description_of_image"
-                width="15"
-                height="15"
-              />
-              <p>Log ind</p>
-            </div>
+            <Link href="/auth/login">
+              <div className="flex gap-3">
+                <Image
+                  src="/icons/user.png"
+                  alt="description_of_image"
+                  width="15"
+                  height="15"
+                />
+                <p>Log ind</p>
+              </div>
+            </Link>
           </div>
         </div>
       </div>
       <div className="mx-64 h-auto py-3 flex justify-between">
         <div className="flex">
-          <Image
-            src="/icons/logo.png"
-            alt="description_of_image"
-            width="180"
-            height="10"
-          />
+          <Link href="/">
+            <Image
+              src="/icons/logo.png"
+              alt="description_of_image"
+              width="180"
+              height="10"
+            />
+          </Link>
         </div>
         <div className="flex gap-8 font-[14px]">
           <Link href="/property-list">Boliger til salg</Link>

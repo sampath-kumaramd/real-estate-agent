@@ -5,9 +5,9 @@ import React from "react";
 
 function ContactUs() {
   return (
-    <>
+    <div className="h-screen">
       <SubNavigation title="Kontakt os" />
-      <div className="mx-64">
+      {/* <div className="mx-64">
         <div className="text-2xl font-bold mb-4">
           Vi sidder klar til at besvare dine spørgsmål
         </div>
@@ -32,8 +32,8 @@ function ContactUs() {
           width="1600"
           height="15"
         />
-      </div>
-    </>
+      </div> */}
+    </div>
   );
 }
 

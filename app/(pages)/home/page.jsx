@@ -4,7 +4,7 @@ import Image from "next/image";
 function HomePage() {
   return (
     <div>
-      <div className="h-auto">
+      <div className="h-screen">
         {/* <div className="relative flex items-center justify-center h-[38rem]">
           <Image
             src="/assets/Home-BG.jpg"
