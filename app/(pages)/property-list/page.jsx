@@ -1,8 +1,11 @@
+import SubNavigation from '@/components/subNavigation'
 import React from 'react'
 
 function PropertyList() {
   return (
-    <div>PropertyList</div>
+    <div className="h-screen">
+      <SubNavigation title="Boliger til salg" />
+    </div>
   )
 }
 

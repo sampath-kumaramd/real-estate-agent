@@ -1,9 +1,12 @@
-import React from 'react'
+import SubNavigation from "@/components/subNavigation";
+import React from "react";
 
 function Favorites() {
   return (
-    <div>Favorites</div>
-  )
+    <div className="h-screen">
+      <SubNavigation title="Mine favoritboliger" />
+    </div>
+  );
 }
 
-export default Favorites
+export default Favorites;
