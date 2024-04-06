@@ -1,3 +1,4 @@
+import ContactUsForm from "@/components/contact-us-form/ContactUsForm";
 import SubNavigation from "@/components/subNavigation";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -5,9 +6,9 @@ import React from "react";
 
 function ContactUs() {
   return (
-    <div className="h-screen">
+    <div className="h-auto">
       <SubNavigation title="Kontakt os" />
-      {/* <div className="mx-64">
+      <div className="mx-64">
         <div className="text-2xl font-bold mb-4">
           Vi sidder klar til at besvare dine spørgsmål
         </div>
@@ -18,21 +19,73 @@ function ContactUs() {
           <br /> Vores medarbejdere sider klar alle ugens dage til at svare på
           dine spørgsmål.
         </div>
-        <div className="flex justify-between gap-10 h-[30rem] pb-10">
-          <div className="border-2 border-[#D3DEE8] w-[40rem]">
-            <Button variant="default" size="default"/>
+        <div className="flex justify-between gap-5 h-auto pb-10">
+          <div className="rounded border-2 border-gray-300 w-[40rem] p-5">
+            <ContactUsForm />
           </div>
-          <div className="border-2 border-[#D3DEE8] w-[20rem]">2</div>
+          <div className="flex flex-col justify-between py-5 rounded border-2 border-gray-300 w-[26rem]">
+            <div className="flex flex-col items-center justify-center w-full gap-2">
+              <div className="flex flex-col items-center justify-center gap-2">
+                <div className="w-12 h-12 bg-[#162A41] rounded-full flex items-center justify-center">
+                  <Image
+                    src="/icons/call.png"
+                    alt="description_of_image"
+                    width="15"
+                    height="15"
+                  />
+                </div>
+                <div className="text-[1rem] font-bold text-black">
+                  Ring til os
+                </div>
+                <div className="text-sm ">+45 7070 4000</div>
+              </div>
+            </div>
+            <div className="w-[20rem] bg-gray-300 h-[0.1rem] mx-10" />
+            <div className="flex flex-col items-center justify-center w-full gap-2">
+              <div className="flex flex-col items-center justify-center gap-2">
+                <div className="w-12 h-12 bg-[#162A41] rounded-full flex items-center justify-center">
+                  <Image
+                    src="/icons/paper-plane.png"
+                    alt="description_of_image"
+                    width="15"
+                    height="15"
+                  />
+                </div>
+                <div className="text-[1rem] font-bold text-black">
+                  send en mail
+                </div>
+                <div className="text-sm ">4000@dinmaegler.dk</div>
+              </div>
+            </div>
+            <div className="w-[20rem] bg-gray-300 h-[0.1rem] mx-10" />
+            <div className="flex flex-col items-center justify-center w-full gap-2">
+              <div className="flex flex-col items-center justify-center gap-2">
+                <div className="w-12 h-12 bg-[#162A41] rounded-full flex items-center justify-center">
+                  <Image
+                    src="/icons/call.png"
+                    alt="description_of_image"
+                    width="15"
+                    height="15"
+                  />
+                </div>
+                <div className="text-[1rem] font-bold text-black">
+                  Besøg butikken
+                </div>
+                <div className="flex flex-col text-sm items-center justify-center">
+                  Stændertorvet 78,<p>4000 Roskilde</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div>
-        <Image
-          src="/assets/map.png"
-          alt="description_of_image"
-          width="1600"
-          height="15"
+      <div className="w-full py-8">
+        <iframe
+          width="100%"
+          height="300"
+          src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=St%C3%A6ndertorvet%2078,%204000%20Roskilde,%20Denmark+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
         />
-      </div> */}
+      </div>
     </div>
   );
 }

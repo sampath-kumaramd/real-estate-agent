@@ -53,7 +53,7 @@ export default function LoginForm() {
 
   // 2. Define a submit handler.
   function onSubmit(values) {
-    console.log(values);
+    // console.log(values);
   }
 
   return (
@@ -70,7 +70,7 @@ export default function LoginForm() {
               <FormItem>
                 <FormLabel>Email adresse</FormLabel>
                 <FormControl>
-                  <Input placeholder="Email adresse" {...field} />
+                  <Input placeholder="Email adresse" {...field} className="rounded"/>
                 </FormControl>
                 <FormMessage>{error?.message}</FormMessage>
               </FormItem>
@@ -83,21 +83,21 @@ export default function LoginForm() {
               <FormItem>
                 <FormLabel>Password</FormLabel>
                 <FormControl>
-                  <Input placeholder="Password" {...field} />
+                  <Input placeholder="Password" {...field} className="rounded"/>
                 </FormControl>
                 <FormMessage>{error?.message}</FormMessage>
               </FormItem>
             )}
           />
-          <Button type="submit" className="w-full rounded-sm bg-[#162A41] h-10">
+          <Button type="submit" className="w-full rounded bg-[#162A41] h-10">
             Log ind
           </Button>
           <div>
             Log ind med
             <div className="flex mt-4 justify-between">
-              <Button className="bg-[#DD4B39] rounded w-36">Google</Button>
-              <Button className="bg-[#3B5999] rounded w-36">Facebook</Button>
-              <Button className="bg-[#162A41] rounded w-36">Twitter</Button>
+              <Button className="bg-[#DD4B39] hover:bg-[#DD4B39] rounded w-36">Google</Button>
+              <Button className="bg-[#3B5999] hover:bg-[#3B5999] rounded w-36">Facebook</Button>
+              <Button className="bg-[#162A41] hover:bg-[#162A41] rounded w-36">Twitter</Button>
             </div>
             <div className="flex items-center justify-center mt-5 text-sm gap-1">
               <p>Har du ikke en konto?</p>
