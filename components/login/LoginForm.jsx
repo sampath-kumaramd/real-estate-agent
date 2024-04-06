@@ -8,15 +8,15 @@ import Link from "next/link";
 
 const formSchema = z.object({
   email: z.string().email({
-    message: "Invalid email address",
+    message: "ugyldig emailadresse.",
   }),
   password: z
     .string()
-    .min(2, {
-      message: "Password must be at least 6 characters.",
+    .min(6, {
+      message: "Adgangskoden skal være på mindst 6 tegn.",
     })
     .max(10, {
-      message: "Password must be at least 10 characters.",
+      message: "Adgangskoden skal være mindre end 10 tegn.",
     })
     .refine(
       (value) =>
@@ -25,7 +25,7 @@ const formSchema = z.object({
         /[^a-zA-Z0-9]/.test(value),
       {
         message:
-          "Password must include at least one letter, one number, and one special character.",
+          "Adgangskoden skal indeholde mindst ét ​​bogstav, ét tal og ét specialtegn.",
       }
     ),
 });
@@ -48,6 +48,7 @@ export default function LoginForm() {
     defaultValues: {
       username: "",
     },
+    mode: "onChange",
   });
 
   // 2. Define a submit handler.
@@ -65,26 +66,26 @@ export default function LoginForm() {
           <FormField
             control={form.control}
             name="email"
-            render={({ field }) => (
+            render={({ field , fieldState: { error }}) => (
               <FormItem>
-                <FormLabel>Email</FormLabel>
+                <FormLabel>Email adresse</FormLabel>
                 <FormControl>
-                  <Input placeholder="Email" {...field} />
+                  <Input placeholder="Email adresse" {...field} />
                 </FormControl>
-                <FormMessage />
+                <FormMessage>{error?.message}</FormMessage>
               </FormItem>
             )}
           />
           <FormField
             control={form.control}
             name="password"
-            render={({ field }) => (
+            render={({ field , fieldState: { error }}) => (
               <FormItem>
                 <FormLabel>Password</FormLabel>
                 <FormControl>
                   <Input placeholder="Password" {...field} />
                 </FormControl>
-                <FormMessage />
+                <FormMessage>{error?.message}</FormMessage>
               </FormItem>
             )}
           />
