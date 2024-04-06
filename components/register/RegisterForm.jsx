@@ -77,7 +77,7 @@ export default function RegisterForm() {
               <FormItem>
                 <FormLabel>Fulde navn</FormLabel>
                 <FormControl>
-                  <Input placeholder="Fulde navn" {...field} />
+                  <Input placeholder="Fulde navn" {...field} className="rounded"/>
                 </FormControl>
                 <FormMessage>{error?.message}</FormMessage>
               </FormItem>
@@ -90,7 +90,7 @@ export default function RegisterForm() {
               <FormItem>
                 <FormLabel>Email adresse</FormLabel>
                 <FormControl>
-                  <Input placeholder="Email adresse" {...field} />
+                  <Input placeholder="Email adresse" {...field} className="rounded"/>
                 </FormControl>
                 <FormMessage>{error?.message}</FormMessage>
               </FormItem>
@@ -103,7 +103,7 @@ export default function RegisterForm() {
               <FormItem>
                 <FormLabel>Password</FormLabel>
                 <FormControl>
-                  <Input placeholder="Password" {...field} />
+                  <Input placeholder="Password" {...field} className="rounded"/>
                 </FormControl>
                 <FormMessage>{error?.message}</FormMessage>
               </FormItem>
@@ -116,13 +116,13 @@ export default function RegisterForm() {
               <FormItem>
                 <FormLabel>Bekræft password</FormLabel>
                 <FormControl>
-                  <Input placeholder="Bekræft password" {...field} />
+                  <Input placeholder="Bekræft password" {...field} className="rounded"/>
                 </FormControl>
                 <FormMessage>{error?.message}</FormMessage>
               </FormItem>
             )}
           />
-          <Button type="submit" className="w-full rounded-sm bg-[#162A41] h-10">
+          <Button type="submit" className="w-full rounded bg-[#162A41] h-10">
             Opret bruger
           </Button>
         </form>
