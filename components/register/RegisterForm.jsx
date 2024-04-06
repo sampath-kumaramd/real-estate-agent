@@ -5,42 +5,43 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 
-const formSchema = z.object({
-  firstName: z.string().refine(
+const password = z
+  .string()
+  .min(6, {
+    message: "Adgangskoden skal være på mindst 6 tegn.",
+  })
+  .max(10, {
+    message: "Adgangskoden skal være mindre end 10 tegn.",
+  })
+  .refine(
     (value) =>
-      /[a-z]/.test(value) &&
-      /[A-Z]/.test(value) && {
-        message: "Fulde navn must include letters only",
-      }
-  ),
-  email: z.string().email({
-    message: "Invalid email address",
-  }),
-  password: z
-    .string()
-    .min(2, {
-      message: "Password must be at least 6 characters.",
-    })
-    .max(10, {
-      message: "Password must be at least 10 characters.",
-    })
-    .refine(
-      (value) =>
-        /[a-z]/.test(value) &&
-        /[0-9]/.test(value) &&
-        /[^a-zA-Z0-9]/.test(value),
-      {
-        message:
-          "Password must include at least one letter, one number, and one special character.",
-      }
-    ),
-});
+      /[a-z]/.test(value) && /[0-9]/.test(value) && /[^a-zA-Z0-9]/.test(value),
+    {
+      message:
+        "Adgangskoden skal indeholde mindst ét ​​bogstav, ét tal og ét specialtegn.",
+    }
+  );
+
+  const formSchema = z.object({
+    firstName: z
+      .string()
+      .refine((value) => /^[A-Za-z\s]+$/.test(value), {
+      message: "Fulde navn må kun indeholde bogstaver.",
+    }),
+    email: z.string().email({
+      message: "ugyldig emailadresse.",
+    }),
+    password: password,
+    confirmPassword: z.string(),
+  }).refine(data => data.password === data.confirmPassword, {
+    message: "Adgangskoder stemmer ikke overens",
+    path: ['confirmPassword'] // point the error to 'confirmPassword' field
+  });
 
 import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -54,6 +55,7 @@ export default function RegisterForm() {
     defaultValues: {
       username: "",
     },
+    mode: "onChange",
   });
 
   // 2. Define a submit handler.
@@ -71,52 +73,52 @@ export default function RegisterForm() {
           <FormField
             control={form.control}
             name="firstName"
-            render={({ field }) => (
+            render={({ field , fieldState: { error } }) => (
               <FormItem>
-                <FormLabel>firstName</FormLabel>
+                <FormLabel>Fulde navn</FormLabel>
                 <FormControl>
-                  <Input placeholder="firstName" {...field} />
+                  <Input placeholder="Fulde navn" {...field} />
                 </FormControl>
-                <FormMessage />
+                <FormMessage>{error?.message}</FormMessage>
               </FormItem>
             )}
           />
           <FormField
             control={form.control}
             name="email"
-            render={({ field }) => (
+            render={({ field , fieldState: { error }}) => (
               <FormItem>
                 <FormLabel>Email adresse</FormLabel>
                 <FormControl>
                   <Input placeholder="Email adresse" {...field} />
                 </FormControl>
-                <FormMessage />
+                <FormMessage>{error?.message}</FormMessage>
               </FormItem>
             )}
           />
           <FormField
             control={form.control}
             name="password"
-            render={({ field }) => (
+            render={({ field , fieldState: { error }}) => (
               <FormItem>
                 <FormLabel>Password</FormLabel>
                 <FormControl>
                   <Input placeholder="Password" {...field} />
                 </FormControl>
-                <FormMessage />
+                <FormMessage>{error?.message}</FormMessage>
               </FormItem>
             )}
           />
           <FormField
             control={form.control}
-            name="password"
-            render={({ field }) => (
+            name="confirmPassword"
+            render={({ field , fieldState: { error }}) => (
               <FormItem>
                 <FormLabel>Bekræft password</FormLabel>
                 <FormControl>
                   <Input placeholder="Bekræft password" {...field} />
                 </FormControl>
-                <FormMessage />
+                <FormMessage>{error?.message}</FormMessage>
               </FormItem>
             )}
           />
