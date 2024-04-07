@@ -32,7 +32,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 
-export default function ContactUsForm() {
+export default function ContactUsForm({isAgant}) {
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -57,7 +57,11 @@ export default function ContactUsForm() {
                 <FormItem>
                   <FormLabel className="text-[1.2rem]">Navn</FormLabel>
                   <FormControl>
-                    <Input placeholder="Indtast dit navn" {...field} className="w-[15rem] rounded text-[1.2rem] h-16"/>
+                    <Input
+                      placeholder="Indtast dit navn"
+                      {...field}
+                      className="w-[15rem] rounded text-[1.2rem] h-16"
+                    />
                   </FormControl>
                   <FormMessage>{error?.message}</FormMessage>
                 </FormItem>
@@ -68,9 +72,15 @@ export default function ContactUsForm() {
               name="email"
               render={({ field, fieldState: { error } }) => (
                 <FormItem>
-                  <FormLabel className="text-[1.2rem]">Indtast din email</FormLabel>
+                  <FormLabel className="text-[1.2rem]">
+                    Indtast din email
+                  </FormLabel>
                   <FormControl>
-                    <Input placeholder="Indtast din email" {...field} className="w-[15rem] rounded text-[1.2rem] h-16"/>
+                    <Input
+                      placeholder="Indtast din email"
+                      {...field}
+                      className="w-[15rem] rounded text-[1.2rem] h-16"
+                    />
                   </FormControl>
                   <FormMessage>{error?.message}</FormMessage>
                 </FormItem>
@@ -84,7 +94,11 @@ export default function ContactUsForm() {
               <FormItem>
                 <FormLabel className="text-[1.2rem]">Emne</FormLabel>
                 <FormControl>
-                  <Input placeholder="Indtast emne" {...field} className="rounded text-[1.2rem] h-16"/>
+                  <Input
+                    placeholder="Indtast emne"
+                    {...field}
+                    className="rounded text-[1.2rem] h-16"
+                  />
                 </FormControl>
               </FormItem>
             )}
@@ -96,16 +110,27 @@ export default function ContactUsForm() {
               <FormItem>
                 <FormLabel className="text-[1.2rem]">Besked</FormLabel>
                 <FormControl>
-                  <Textarea placeholder="Indtast din besked... " {...field} className="rounded text-[1.2rem] h-48"/>
+                  <Textarea
+                    placeholder="Indtast din besked... "
+                    {...field}
+                    className="rounded text-[1.2rem] h-48"
+                  />
                 </FormControl>
               </FormItem>
             )}
           />
-          <div className="pb-2">
-            <Checkbox className="border rounded border-gray-300 mr-3 h-6 w-6"/>
-            <FormLabel className="text-gray-700 text-md">Ja tak, jeg vil gerne modtage Din Mæglers nyhedsbrev.</FormLabel>
-          </div>
-          <Button type="submit" className="w-48 rounded bg-[#162A41] h-16 text-[1.1rem]">
+          {isAgant === 'true' && (
+            <div className="pb-2">
+              <Checkbox className="border rounded border-gray-300 mr-3 h-6 w-6" />
+              <FormLabel className="text-gray-700 text-md">
+                Ja tak, jeg vil gerne modtage Din Mæglers nyhedsbrev.
+              </FormLabel>
+            </div>
+          )}
+          <Button
+            type="submit"
+            className="w-48 rounded bg-[#162A41] h-16 text-[1.1rem]"
+          >
             Send besked
           </Button>
         </form>
