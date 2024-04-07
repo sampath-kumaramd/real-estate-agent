@@ -19,7 +19,7 @@ function HomePage() {
           </div>
         </div>
         <div className="bg-[#162A41] mt-10">
-          <div className="flex justify-between mx-64">
+          <div className="flex justify-between mx-96">
             <div className="flex flex-col text-white py-16 gap-5">
               <div className="text-2xl font-bold">
                 Hold dig opdateret <br />

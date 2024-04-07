@@ -64,9 +64,9 @@ export default function RegisterForm() {
   }
 
   return (
-    <div className="mx-96 border border-[D3DEE8] h-auto px-32 py-12 my-12">
+    <div className="mx-[30rem] border border-[D3DEE8] h-auto px-48 py-20 my-36">
       <Form {...form}>
-        <div className="text-center font-bold text-2xl mb-8">
+        <div className="text-center font-bold text-3xl mb-12">
           Opret bruger hos Din Mægler
         </div>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -75,9 +75,9 @@ export default function RegisterForm() {
             name="firstName"
             render={({ field , fieldState: { error } }) => (
               <FormItem>
-                <FormLabel>Fulde navn</FormLabel>
+                <FormLabel className="text-[1.2rem]">Fulde navn</FormLabel>
                 <FormControl>
-                  <Input placeholder="Fulde navn" {...field} className="rounded"/>
+                  <Input placeholder="Fulde navn" {...field} className="w-full rounded text-[1.2rem] h-16"/>
                 </FormControl>
                 <FormMessage>{error?.message}</FormMessage>
               </FormItem>
@@ -88,9 +88,9 @@ export default function RegisterForm() {
             name="email"
             render={({ field , fieldState: { error }}) => (
               <FormItem>
-                <FormLabel>Email adresse</FormLabel>
+                <FormLabel className="text-[1.2rem]">Email adresse</FormLabel>
                 <FormControl>
-                  <Input placeholder="Email adresse" {...field} className="rounded"/>
+                  <Input placeholder="Email adresse" {...field} className="w-full rounded text-[1.2rem] h-16"/>
                 </FormControl>
                 <FormMessage>{error?.message}</FormMessage>
               </FormItem>
@@ -101,9 +101,9 @@ export default function RegisterForm() {
             name="password"
             render={({ field , fieldState: { error }}) => (
               <FormItem>
-                <FormLabel>Password</FormLabel>
+                <FormLabel className="text-[1.2rem]">Password</FormLabel>
                 <FormControl>
-                  <Input placeholder="Password" {...field} className="rounded"/>
+                  <Input placeholder="Password" {...field} className="w-full rounded text-[1.2rem] h-16"/>
                 </FormControl>
                 <FormMessage>{error?.message}</FormMessage>
               </FormItem>
@@ -114,15 +114,15 @@ export default function RegisterForm() {
             name="confirmPassword"
             render={({ field , fieldState: { error }}) => (
               <FormItem>
-                <FormLabel>Bekræft password</FormLabel>
+                <FormLabel className="text-[1.2rem]">Bekræft password</FormLabel>
                 <FormControl>
-                  <Input placeholder="Bekræft password" {...field} className="rounded"/>
+                  <Input placeholder="Bekræft password" {...field} className="w-full rounded text-[1.2rem] h-16"/>
                 </FormControl>
                 <FormMessage>{error?.message}</FormMessage>
               </FormItem>
             )}
           />
-          <Button type="submit" className="w-full rounded bg-[#162A41] h-10">
+          <Button type="submit" className="w-full rounded bg-[#162A41] h-16 text-[1.1rem]">
             Opret bruger
           </Button>
         </form>
