@@ -8,12 +8,12 @@ function ContactUs() {
   return (
     <div className="h-auto">
       <SubNavigation title="Kontakt os" />
-      <div className="mx-64">
-        <div className="text-2xl font-bold mb-4">
+      <div className="mx-96">
+        <div className="text-[1.8rem] font-bold mb-4">
           Vi sidder klar til at besvare dine spørgsmål
         </div>
         <div className="w-[5.5rem] h-1 bg-[#162A41]"></div>
-        <div className="text-sm mt-7 mb-10">
+        <div className="text-[1.1rem] mt-7 mb-10">
           Der kan opstå tvivl om mange ting nå man gerne vil, eller er i gang
           med at sælge sin bolig.
           <br /> Vores medarbejdere sider klar alle ugens dage til at svare på
@@ -23,21 +23,21 @@ function ContactUs() {
           <div className="rounded border-2 border-gray-300 w-[40rem] p-5">
             <ContactUsForm />
           </div>
-          <div className="flex flex-col justify-between py-5 rounded border-2 border-gray-300 w-[26rem]">
+          <div className="flex flex-col justify-between py-12 rounded border-2 border-gray-300 w-[26rem]">
             <div className="flex flex-col items-center justify-center w-full gap-2">
-              <div className="flex flex-col items-center justify-center gap-2">
+              <div className="flex flex-col items-center justify-center gap-3">
                 <div className="w-12 h-12 bg-[#162A41] rounded-full flex items-center justify-center">
                   <Image
-                    src="/icons/call.png"
+                    src="/icons/call.svg"
                     alt="description_of_image"
-                    width="15"
-                    height="15"
+                    width="25"
+                    height="25"
                   />
                 </div>
-                <div className="text-[1rem] font-bold text-black">
+                <div className="text-[1.25rem] font-bold text-black">
                   Ring til os
                 </div>
-                <div className="text-sm ">+45 7070 4000</div>
+                <div className="text-[1.2rem] ">+45 7070 4000</div>
               </div>
             </div>
             <div className="w-[20rem] bg-gray-300 h-[0.1rem] mx-10" />
@@ -45,16 +45,16 @@ function ContactUs() {
               <div className="flex flex-col items-center justify-center gap-2">
                 <div className="w-12 h-12 bg-[#162A41] rounded-full flex items-center justify-center">
                   <Image
-                    src="/icons/paper-plane.png"
+                    src="/icons/paper-plane.svg"
                     alt="description_of_image"
-                    width="15"
-                    height="15"
+                    width="25"
+                    height="25"
                   />
                 </div>
-                <div className="text-[1rem] font-bold text-black">
+                <div className="text-[1.25rem] font-bold text-black">
                   send en mail
                 </div>
-                <div className="text-sm ">4000@dinmaegler.dk</div>
+                <div className="text-[1.2rem]">4000@dinmaegler.dk</div>
               </div>
             </div>
             <div className="w-[20rem] bg-gray-300 h-[0.1rem] mx-10" />
@@ -62,16 +62,16 @@ function ContactUs() {
               <div className="flex flex-col items-center justify-center gap-2">
                 <div className="w-12 h-12 bg-[#162A41] rounded-full flex items-center justify-center">
                   <Image
-                    src="/icons/call.png"
+                    src="/icons/location.svg"
                     alt="description_of_image"
-                    width="15"
-                    height="15"
+                    width="25"
+                    height="25"
                   />
                 </div>
-                <div className="text-[1rem] font-bold text-black">
+                <div className="text-[1.25rem] font-bold text-black">
                   Besøg butikken
                 </div>
-                <div className="flex flex-col text-sm items-center justify-center">
+                <div className="flex flex-col text-[1.2rem] items-center justify-center">
                   Stændertorvet 78,<p>4000 Roskilde</p>
                 </div>
               </div>
@@ -79,7 +79,7 @@ function ContactUs() {
           </div>
         </div>
       </div>
-      <div className="w-full py-8">
+      <div className="w-full pt-8">
         <iframe
           width="100%"
           height="300"

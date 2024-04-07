@@ -57,9 +57,9 @@ export default function LoginForm() {
   }
 
   return (
-    <div className="mx-96 border border-[D3DEE8] h-auto px-32 py-12 my-12">
+    <div className="mx-[30rem] rounded border border-[D3DEE8] h-auto px-48 py-20 my-36">
       <Form {...form}>
-        <div className="text-center font-bold text-2xl mb-8">
+        <div className="text-center font-bold text-3xl mb-12">
           Log ind på din konto
         </div>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -68,9 +68,9 @@ export default function LoginForm() {
             name="email"
             render={({ field , fieldState: { error }}) => (
               <FormItem>
-                <FormLabel>Email adresse</FormLabel>
+                <FormLabel className="text-[1.2rem]">Email adresse</FormLabel>
                 <FormControl>
-                  <Input placeholder="Email adresse" {...field} className="rounded"/>
+                  <Input placeholder="Email adresse" {...field} className="w-full rounded text-[1.2rem] h-16"/>
                 </FormControl>
                 <FormMessage>{error?.message}</FormMessage>
               </FormItem>
@@ -81,25 +81,25 @@ export default function LoginForm() {
             name="password"
             render={({ field , fieldState: { error }}) => (
               <FormItem>
-                <FormLabel>Password</FormLabel>
+                <FormLabel className="text-[1.2rem]">Password</FormLabel>
                 <FormControl>
-                  <Input placeholder="Password" {...field} className="rounded"/>
+                  <Input placeholder="Password" {...field} className="w-full rounded text-[1.2rem] h-16"/>
                 </FormControl>
                 <FormMessage>{error?.message}</FormMessage>
               </FormItem>
             )}
           />
-          <Button type="submit" className="w-full rounded bg-[#162A41] h-10">
+          <Button type="submit" className="w-full rounded bg-[#162A41] h-16 text-[1.1rem]">
             Log ind
           </Button>
           <div>
             Log ind med
-            <div className="flex mt-4 justify-between">
-              <Button className="bg-[#DD4B39] hover:bg-[#DD4B39] rounded w-36">Google</Button>
-              <Button className="bg-[#3B5999] hover:bg-[#3B5999] rounded w-36">Facebook</Button>
-              <Button className="bg-[#162A41] hover:bg-[#162A41] rounded w-36">Twitter</Button>
+            <div className="flex mt-4 justify-between gap-3">
+              <Button className="bg-[#DD4B39] hover:bg-[#DD4B39] rounded w-full h-16 text-[1.1rem]">Google</Button>
+              <Button className="bg-[#3B5999] hover:bg-[#3B5999] rounded w-full h-16 text-[1.1rem]">Facebook</Button>
+              <Button className="bg-[#162A41] hover:bg-[#162A41] rounded w-full h-16 text-[1.1rem]">Twitter</Button>
             </div>
-            <div className="flex items-center justify-center mt-5 text-sm gap-1">
+            <div className="flex items-center justify-center mt-8 text-lg gap-1">
               <p>Har du ikke en konto?</p>
               <Link href="/auth/register">
               <p className="text-sky-500"> Opret bruger.</p>
