@@ -7,6 +7,7 @@ import React from "react";
 import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
+import { propertiesData } from "@data/property-data";
 
 import {
   Select,
@@ -19,107 +20,10 @@ import {
 } from "@/components/ui/select";
 import { Slider } from "@/components/ui/slider";
 
-const propertyData = [
-  {
-    id: 1,
-    type: "Villa",
-    name: "Klosterengen 234",
-    price: "4.567.890",
-    image: "/assets/villa_1.png",
-    address: "4000 Roskilde",
-    roomsCount: 5,
-    area: 156,
-    energyLable: "A",
-    letterBG: "bg-lime-500",
-  },
-  {
-    id: 2,
-    type: "Villa",
-    name: "Lønbjergparken 22 • Vindinge",
-    price: "4.567.890",
-    image: "/assets/villa_2.png",
-    address: "4000 Roskilde",
-    roomsCount: 5,
-    area: 156,
-    energyLable: "B",
-    letterBG: "bg-cyan-500",
-  },
-  {
-    id: 3,
-    type: "Villa",
-    name: "Lønbjergparken 22 • Vindinge",
-    price: "4.567.890",
-    image: "/assets/villa_3.png",
-    address: "4000 Roskilde",
-    roomsCount: 5,
-    area: 156,
-    energyLable: "B",
-    letterBG: "bg-cyan-500",
-  },
-  {
-    id: 4,
-    type: "Villa",
-    name: "Lønbjergparken 22 • Vindinge",
-    price: "4.567.890",
-    image: "/assets/villa_4.png",
-    address: "4000 Roskilde",
-    roomsCount: 5,
-    area: 156,
-    energyLable: "B",
-    letterBG: "bg-red-500",
-  },
-  {
-    id: 5,
-    type: "Villa",
-    name: "Klosterengen 234",
-    price: "4.567.890",
-    image: "/assets/villa_1.png",
-    address: "4000 Roskilde",
-    roomsCount: 5,
-    area: 156,
-    energyLable: "A",
-    letterBG: "bg-lime-500",
-  },
-  {
-    id: 6,
-    type: "Villa",
-    name: "Lønbjergparken 22 • Vindinge",
-    price: "4.567.890",
-    image: "/assets/villa_2.png",
-    address: "4000 Roskilde",
-    roomsCount: 5,
-    area: 156,
-    energyLable: "B",
-    letterBG: "bg-cyan-500",
-  },
-  {
-    id: 7,
-    type: "Villa",
-    name: "Lønbjergparken 22 • Vindinge",
-    price: "4.567.890",
-    image: "/assets/villa_3.png",
-    address: "4000 Roskilde",
-    roomsCount: 5,
-    area: 156,
-    energyLable: "B",
-    letterBG: "bg-cyan-500",
-  },
-  {
-    id: 8,
-    type: "Villa",
-    name: "Lønbjergparken 22 • Vindinge",
-    price: "4.567.890",
-    image: "/assets/villa_4.png",
-    address: "4000 Roskilde",
-    roomsCount: 5,
-    area: 156,
-    energyLable: "B",
-    letterBG: "bg-red-500",
-  },
-];
+
 
 function PropertyList() {
-  const [properties, setProperties] = useState(propertyData);
+  const [properties, setProperties] = useState(propertiesData);
 
   const handleFavouriteClick = (id) => {
     setProperties(

@@ -2,41 +2,10 @@ import SubNavigation from "@/components/subNavigation";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-
 import { Card, CardContent } from "@/components/ui/card";
+import {agentsData} from "@data/agent-data"
 
-const agentsData = [
-  {
-    id: 1,
-    name: "Grant Marshall",
-    address: "Ejendomsmægler, MDMS ",
-  },
-  {
-    id: 2,
-    name: "Grant Marshall",
-    address: "Ejendomsmægler, MDMS ",
-  },
-  {
-    id: 3,
-    name: "Grant Marshall",
-    address: "Ejendomsmægler, MDMS ",
-  },
-  {
-    id: 4,
-    name: "Grant Marshall",
-    address: "Ejendomsmægler, MDMS ",
-  },
-  {
-    id: 5,
-    name: "Grant Marshall",
-    address: "Ejendomsmægler, MDMS ",
-  },
-  {
-    id: 6,
-    name: "Grant Marshall",
-    address: "Ejendomsmægler, MDMS ",
-  },
-];
+
 
 function Agents() {
   return (

@@ -3,39 +3,8 @@ import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-
-const homepageIcon = [
-  {
-    src: "/icons/homepage_icons/house.svg",
-    name: "boliger solgt",
-    count: 4826,
-  },
-  {
-    src: "/icons/homepage_icons/home.svg",
-    name: "boliger til salg",
-    count: 158,
-  },
-];
-
-const iconList1 = [
-  {
-    src: "/icons/iconList1/1.svg",
-    topic: "Bestil et salgstjek",
-    description: "",
-  },
-  {
-    src: "/icons/iconList1/2.svg",
-    topic: "74 butikker",
-    description:
-      "Hos Din Mægler er din bolig til salg i alle vores 74 butikker, som er fordelt rundt om i Danmark.",
-  },
-  {
-    src: "/icons/iconList1/3.svg",
-    topic: "Tilmeld køberkartotek",
-    description:
-      "Når du er tilmeldt vores køberkartotek, bliver du kontaktet inden en ny bolig bliver annonceret.",
-  },
-];
+import { homepageIcon} from "@data/home-page";
+import { iconList1 } from "@data/home-page";
 
 function HomePage() {
   return (
