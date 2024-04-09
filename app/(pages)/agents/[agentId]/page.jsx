@@ -1,12 +1,14 @@
 "use client";
 
-import SubNavigation from "@/components/subNavigation";
-import { Input } from "@/components/ui/input";
-import { Separator } from "@radix-ui/react-separator";
 import React from "react";
 import Image from "next/image";
+import { Separator } from "@radix-ui/react-separator";
+
+import SubNavigation from "@/components/subNavigation";
+import { Input } from "@/components/ui/input";
 import ContactUsForm from "@/components/contact-us-form/ContactUsForm";
 import SocialMedia from "@/components/socialMedia";
+
 import { agentData } from "@data/agent-data";
 
 function Agent() {
@@ -23,9 +25,9 @@ function Agent() {
                 width="280"
                 height="200"
               />
-               <div className="flex absolute z-10 bottom-48 bg-[#162A41] w-28 h-10 p-3 justify-between">
-                  <SocialMedia />
-                </div>
+              <div className="flex absolute z-10 bottom-48 bg-[#162A41] w-28 h-10 p-3 justify-between">
+                <SocialMedia />
+              </div>
             </div>
             <div className="w-3/5 pl-8">
               <div className="flex justify-between">
@@ -80,7 +82,7 @@ function Agent() {
               Kontakt {agentData.name}
             </div>
             <Separator className="bg-[#162A41] w-[3.5rem] h-[0.25rem] mt-4" />
-            <ContactUsForm isAgant='false'/>
+            <ContactUsForm isAgant='false' />
           </div>
         </div>
         <div className="flex flex-col gap-5">

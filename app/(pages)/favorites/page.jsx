@@ -1,5 +1,6 @@
-import SubNavigation from "@/components/subNavigation";
 import React from "react";
+
+import SubNavigation from "@/components/subNavigation";
 
 function Favorites() {
   return (

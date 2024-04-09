@@ -1,6 +1,6 @@
 import React from "react";
+
 import SubNavigationLogin from "@/components/subNavigationLogin";
-import { z } from "zod";
 import RegisterForm from "@/components/register/RegisterForm";
 
 function Register() {

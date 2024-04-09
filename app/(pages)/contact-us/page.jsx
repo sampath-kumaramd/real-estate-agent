@@ -1,7 +1,8 @@
+import React from "react";
+import Image from "next/image";
+
 import ContactUsForm from "@/components/contact-us-form/ContactUsForm";
 import SubNavigation from "@/components/subNavigation";
-import Image from "next/image";
-import React from "react";
 
 function ContactUs() {
   return (
@@ -20,7 +21,7 @@ function ContactUs() {
         </div>
         <div className="flex justify-between gap-5 h-auto pb-10">
           <div className="rounded border border-gray-300 w-[40rem] p-5">
-            <ContactUsForm isAgant='true'/>
+            <ContactUsForm isAgant='true' />
           </div>
           <div className="flex flex-col justify-between py-12 rounded border border-gray-300 w-[26rem]">
             <div className="flex flex-col items-center justify-center w-full gap-2">

@@ -1,7 +1,9 @@
-import SubNavigation from "@/components/subNavigation";
 import React from "react";
-import {agentsData} from "@data/agent-data"
+
+import SubNavigation from "@/components/subNavigation";
 import AgentCard from "@/components/agentCard";
+
+import { agentsData } from "@data/agent-data"
 
 function Agents() {
   return (

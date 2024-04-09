@@ -1,15 +1,17 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
+
 import { Separator } from "@/components/ui/separator";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { homepageIcon } from "@data/home-page";
-import { iconList1 } from "@data/home-page";
 import AgentCard from "@/components/agentCard";
+import PropertyCard from "@/components/propertyCard";
+
 import { agentsData } from "@data/agent-data";
 import { propertiesData } from "@data/property-data";
-import PropertyCard from "@/components/propertyCard";
-import Link from "next/link";
+import { homepageIcon } from "@data/home-page";
+import { iconList1 } from "@data/home-page";
 
 function HomePage() {
   return (

@@ -1,12 +1,12 @@
 "use client";
 
 import React from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { useState } from "react";
-import { propertiesData } from "@data/property-data";
 
 export default function PropertyCard({ property, index }) {
   

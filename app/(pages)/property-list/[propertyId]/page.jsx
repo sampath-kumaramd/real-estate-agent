@@ -2,14 +2,13 @@
 
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { Separator } from "@radix-ui/react-separator";
+
 import SocialMedia from "@/components/socialMedia";
+
 import { propertyData } from "@data/property-data";
 import { agentData } from "@data/property-data";
 import { imagePaths } from "@data/property-data";
-
-
 
 function Property() {
   return (
