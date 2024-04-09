@@ -221,41 +221,42 @@ function HomePage() {
             </Button>
           </div>
         </div>
-
+        
+        {/* mobile app section */}
         <div className="bg-[#162A41] mt-10">
           <div className="flex justify-between mx-96">
-            <div className="flex flex-col text-white py-16 gap-5">
-              <div className="text-2xl font-bold">
+            <div className="flex flex-col text-white py-24 gap-5">
+              <div className="text-4xl font-bold leading-snug">
                 Hold dig opdateret <br />
                 på salgsprocessen
               </div>
-              <p className="text-[0.7rem]">
+              <p className="text-lg">
                 Når du sælger din bolig hos Din Mægler, kommunikerer du nemt med
                 den <br /> ansvarlige mægler eller butik med vores app. Her kan
                 du også se statistik på <br />
                 interessen for din bolig i alle vores salgskanaler.
               </p>
               <div className="flex gap-5">
-                <button className="flex bg-white rounded w-36 text-[#162A41]">
-                  <div className="flex gap-2 py-2 mx-auto">
+                <button className="flex bg-white rounded w-48 h-16 text-[#162A41] justify-center items-center">
+                  <div className="flex gap-2 mx-auto">
                     <Image
-                      src="/icons/play-store.png"
+                      src="/icons/play_store.svg"
                       alt="description_of_image"
-                      width="20"
+                      width="30"
                       height="15"
                     />
-                    <p className="text-[0.8rem] font-bold">Google Play</p>
+                    <p className="text-[1.1rem] font-semibold">Google Play</p>
                   </div>
                 </button>
-                <button className="flex bg-[#162A41] rounded w-36 border border-white text-white">
+                <button className="flex bg-[#162A41] rounded w-48 border border-white text-white justify-center items-center">
                   <div className="flex gap-2 py-2 mx-auto">
                     <Image
-                      src="/icons/apple-store.png"
+                      src="/icons/apple_store.svg"
                       alt="description_of_image"
-                      width="20"
+                      width="30"
                       height="15"
                     />
-                    <p className="text-[0.8rem] font-bold">Apple</p>
+                    <p className="text-[1.1rem] font-semibold">Apple Store</p>
                   </div>
                 </button>
               </div>
@@ -264,16 +265,16 @@ function HomePage() {
               <Image
                 src="/assets/phone-LS.png"
                 alt="description_of_image"
-                width="150"
+                width="200"
                 height="15"
-                className="h-72 w-52 mr-[-4rem] z-10"
+                className="h-[27.5rem] w-64 mr-[-3rem] z-10"
               />
               <Image
                 src="/assets/phone-RS.png"
                 alt="description_of_image"
                 width="150"
                 height="15"
-                className="h-[18rem] w-48"
+                className="h-[27.5rem] w-56"
               />
             </div>
           </div>
