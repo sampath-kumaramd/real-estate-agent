@@ -7,20 +7,7 @@ import React from "react";
 import Image from "next/image";
 import ContactUsForm from "@/components/contact-us-form/ContactUsForm";
 import SocialMedia from "@/components/socialMedia";
-
-const agentData = {
-    id: 1,
-    name: "Peter Sørensen",
-    address: "Statsautoriseret ejendomsmægler",
-    call: "+45 7070 4012",
-    image: "/assets/agent.png",
-    email: "peter@dinmaegler.com",
-    description1:
-      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
-    description2:
-      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form by injected humour.",
-  }
-
+import { agentData } from "@data/agent-data";
 
 function Agent() {
   return (
