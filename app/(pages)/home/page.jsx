@@ -3,8 +3,13 @@ import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { homepageIcon} from "@data/home-page";
+import { homepageIcon } from "@data/home-page";
 import { iconList1 } from "@data/home-page";
+import AgentCard from "@/components/agentCard";
+import { agentsData } from "@data/agent-data";
+import { propertiesData } from "@data/property-data";
+import PropertyCard from "@/components/propertyCard";
+import Link from "next/link";
 
 function HomePage() {
   return (
@@ -126,14 +131,21 @@ function HomePage() {
                 but the this in <br /> majority have suffered alteration in some
               </p>
             </div>
-            <div className="h-[38rem]"></div>
+            <div className="flex flex-wrap gap-7 justify-between h-auto mt-12">
+              {propertiesData.slice(0, 4).map((property, index) => (
+                <PropertyCard key={index} property={property} />
+              ))}
+            </div>
             <div className="flex w-full items-center justify-center mt-10">
-              <Button
+            <Link href="property-list">
+            <Button
                 type="submit"
                 className="w-48 rounded bg-[#162A41] h-16 text-[1.1rem]"
               >
                 Se alle boliger
               </Button>
+            </Link>
+              
             </div>
           </div>
         </div>
@@ -180,17 +192,23 @@ function HomePage() {
               boligsalg. <br /> Kontakt en af vores medarbejdere.
             </p>
           </div>
-          <div className="h-[38rem]"></div>
+          <div className="flex flex-wrap h-auto mt-10">
+            {agentsData.slice(0, 3).map((agent, index) => (
+              <AgentCard key={index} agent={agent} />
+            ))}
+          </div>
           <div className="flex w-full items-center justify-center mt-10">
-            <Button
-              type="submit"
-              className="w-48 rounded bg-[#162A41] h-16 text-[1.1rem]"
-            >
-              Se alle mæglere
-            </Button>
+            <Link href="/agents">
+              <Button
+                type="submit"
+                className="w-48 rounded bg-[#162A41] h-16 text-[1.1rem]"
+              >
+                Se alle mæglere
+              </Button>
+            </Link>
           </div>
         </div>
-        
+
         {/* mobile app section */}
         <div className="bg-[#162A41] mt-10">
           <div className="flex justify-between mx-96">
