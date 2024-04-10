@@ -8,7 +8,6 @@ import SocialMedia from "@/components/socialMedia";
 
 import { propertyData } from "@data/property-data";
 import { agentData } from "@data/property-data";
-
 import { imagePaths } from "@data/property-data";
 
 function Property() {
@@ -37,7 +36,6 @@ function Property() {
             />
           ))}
 
-         
         </div>
         <div className="font-semibold text-3xl mt-3">
           Kr. {propertyData.price}{" "}

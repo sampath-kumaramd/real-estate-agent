@@ -13,7 +13,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Separator } from "@/components/ui/separator";
-import { Slider } from "@/components/ui/slider";
+import RangeSlider, { Slider } from "@/components/rangeSlider";
 import SubNavigation from "@/components/subNavigation";
 import PropertyCard from "@/components/propertyCard";
 
@@ -57,7 +57,7 @@ function PropertyList() {
           <div className="flex flex-col gap-2">
             <div className="text-lg">Pris-interval</div>
             <div>
-              <Slider defaultValue={[33, 20]} max={100} step={1} />
+              <RangeSlider />
             </div>
           </div>
         </div>
