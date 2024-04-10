@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { Separator } from "@radix-ui/react-separator";
 
@@ -8,9 +8,11 @@ import SocialMedia from "@/components/socialMedia";
 
 import { propertyData } from "@data/property-data";
 import { agentData } from "@data/property-data";
+
 import { imagePaths } from "@data/property-data";
 
 function Property() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="flex flex-col">
       <Image
@@ -34,6 +36,8 @@ function Property() {
               height="10"
             />
           ))}
+
+         
         </div>
         <div className="font-semibold text-3xl mt-3">
           Kr. {propertyData.price}{" "}

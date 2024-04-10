@@ -9,13 +9,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
 export default function PropertyCard({ property, index }) {
-  
   const [isFavourite, setIsFavourite] = useState(property.isFavourite);
 
   const toggleIsFavorite = () => {
     setIsFavourite(!isFavourite);
   };
-
 
   return (
     <>
@@ -35,9 +33,7 @@ export default function PropertyCard({ property, index }) {
               <button onClick={toggleIsFavorite}>
                 <Image
                   src={
-                    isFavourite
-                      ? "/icons/black_heart.svg"
-                      : "/icons/heart.svg"
+                    isFavourite ? "/icons/black_heart.svg" : "/icons/heart.svg"
                   }
                   alt="description_of_image"
                   width="15"
@@ -56,9 +52,7 @@ export default function PropertyCard({ property, index }) {
             <Separator />
             <div className="flex justify-between">
               <div className="flex gap-5">
-                <div
-                  className={`h-7 w-7 ${property.letterBG} justify-center items-center flex text-white font-bold`}
-                >
+              <div className={`h-7 w-7 ${property.letterBG} justify-center items-center flex text-white font-bold`}>
                   {property.energyLable}
                 </div>
                 <div className="flex text-sm pt-1">
