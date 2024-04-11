@@ -29,7 +29,7 @@ export default function PropertyCard({ property, index }) {
             />
           </Link>
           <div className="flex flex-end top-0 w-full h-full p-5 mb-[-4rem] justify-end">
-            <div className="w-10 h-10 z-10 mt-[-15rem] bg-white rounded-full flex items-center justify-center">
+            <div className="w-10 h-10 z-10 mt-[-14rem] bg-white rounded-full flex items-center justify-center">
               <button onClick={toggleIsFavorite}>
                 <Image
                   src={

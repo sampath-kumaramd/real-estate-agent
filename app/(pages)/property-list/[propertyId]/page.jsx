@@ -15,6 +15,10 @@ function Property({ searchParams }) {
   const [showModal, setShowModal] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
   const toggleModal = () => setShowModal(!showModal);
+  const [isFavourite, setIsFavourite] = useState(propertyData.isFavourite);
+  const toggleIsFavorite = () => {
+    setIsFavourite(!isFavourite);
+  };
   const show = searchParams?.show;
   return (
     <div className="flex flex-col">
@@ -40,12 +44,17 @@ function Property({ searchParams }) {
               />
             </button>
           ))}
-          <Image
-            src={propertyData.imagePathsLastImage}
-            alt={`description_of_image_ ${propertyData.imagePaths.length}`}
-            width="40"
-            height="10"
-          />
+          <button onClick={toggleIsFavorite}>
+            <Image
+              src={
+                isFavourite ? "/icons/black_heart.svg" : "/icons/property_data/heart_gray.svg"
+              }
+              // src={propertyData.imagePathsLastImage}
+              alt={`description_of_image_ ${propertyData.imagePaths.length}`}
+              width="40"
+              height="10"
+            />
+          </button>
           {showModal ? (
             <>
               <ImageModal imageSrc={selectedImage} closeModal={() => setShowModal(false)} />

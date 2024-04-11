@@ -17,14 +17,20 @@ function ImageModal({ imageSrc, closeModal }) {
         }
     };
 
+    const [isFavourite, setIsFavourite] = useState(false);
+
+    const toggleIsFavorite = () => {
+      setIsFavourite(!isFavourite);
+    };
+
     return (
         <div className="fixed inset-0 z-20 bg-gray-950 bg-opacity-80 overflow-y-auto h-full w-full flex items-center justify-center" onClick={handleClickOutside}>
-            <div className="w-full mt-20 mx-4 shadow-lg rounded-md flex items-center justify-center flex-col ">
+            <div className="w-full mt-12 mx-4 shadow-lg rounded-md flex items-center justify-center flex-col ">
                 <div className="text-center">
                     <Image
                         src={image}
                         alt={`description_of_image_`}
-                        width="1440"
+                        width="1400"
                         height="10"
                         className="image"
                     />
@@ -42,13 +48,18 @@ function ImageModal({ imageSrc, closeModal }) {
                             />
                         </button>
                     ))}
-                    <Image
-                        src={propertyData.imagePathsLastImageWhite}
-                        alt={`description_of_image_ ${propertyData.imagePaths.length}`}
-                        width="40"
-                        height="10"
-                        className="image"
-                    />
+                    <button onClick={toggleIsFavorite}>
+                        <Image
+                            src={
+                                isFavourite ? "/icons/property_data/white-heart.png" : "/icons/property_data/heart_white.svg"
+                            }
+                            // src={propertyData.imagePathsLastImage}
+                            alt={`description_of_image_ ${propertyData.imagePaths.length}`}
+                            width="40"
+                            height="10"
+                            className="image"
+                        />
+                    </button>
                 </div>
 
             </div>

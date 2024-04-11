@@ -25,7 +25,7 @@ function Favorites() {
             className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-500"
           />
           <Input
-            placeholder="Search"
+            placeholder="Søg i favoritter"
             className="pl-10 text-[1rem] rounded w-72"
           />
         </div>

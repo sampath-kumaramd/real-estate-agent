@@ -18,7 +18,7 @@ export default function FavouritePropertyCard({ property, index }) {
   return (
     <>
       <Card key={index} className="w-full border border-gray-300">
-        <CardContent className="flex p-8 h-auto rounded shadow-md">
+        <CardContent className="flex p-8 h-auto rounded">
           <Link href={`/property-list/${property.id}`}>
             <Image
               src={property.image}
@@ -37,11 +37,11 @@ export default function FavouritePropertyCard({ property, index }) {
             </div>
           </div>
           <div className="flex flex-col w-[25rem]">
-            <div className="flex w-full gap-10">
+            <div className="flex w-full space-x-10 justify-between">
               <div className="flex gap-5">
                 <div style={{ backgroundColor: property.letterBG }} className={`h-7 w-7 justify-center items-center flex text-white font-bold`}>
                   {property.energyLable}
-                </div>
+                </div> 
                 <div className="flex text-base pt-1">
                   {property.roomsCount} værelser . {property.area} m
                   <sup className="text-xs">2</sup>

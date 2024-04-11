@@ -37,7 +37,7 @@ function PropertyList() {
       <div className="mx-96">
         <div className="text-2xl font-bold">Søg efter dit drømmehus</div>
         <Separator className="bg-[#162A41] w-[3.5rem] h-[0.25rem] mt-2 mb-4 " />
-        <div className="flex gap-12">
+        <div className="flex gap-4">
           <div className="flex flex-col gap-2">
             <div className="text-lg">Ejendomstype</div>
             <div className="pb-10">
@@ -61,7 +61,7 @@ function PropertyList() {
             </div>
           </div>
         </div>
-        <div className="flex flex-wrap gap-7 justify-between">
+        <div className="flex flex-wrap gap-7 justify-between mt-12">
           {properties.map((property, index) => (
             <PropertyCard key={index} property={property} />
           ))}
