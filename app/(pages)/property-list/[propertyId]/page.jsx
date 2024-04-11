@@ -5,13 +5,17 @@ import Image from "next/image";
 import { Separator } from "@radix-ui/react-separator";
 
 import SocialMedia from "@/components/socialMedia";
+import ImageModal from "@/components/ui/imageModal";
 
 import { propertyData } from "@data/property-data";
 import { agentData } from "@data/property-data";
-import { imagePaths } from "@data/property-data";
 
-function Property() {
-  const [isOpen, setIsOpen] = useState(false);
+
+function Property({ searchParams }) {
+  const [showModal, setShowModal] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+  const toggleModal = () => setShowModal(!showModal);
+  const show = searchParams?.show;
   return (
     <div className="flex flex-col">
       <Image
@@ -26,17 +30,29 @@ function Property() {
           <p>{propertyData.address}</p>
         </div>
         <div className="flex gap-10">
-          {imagePaths.map((path, index) => (
-            <Image
-              key={index}
-              src={path}
-              alt={`description_of_image_${index}`}
-              width="40"
-              height="10"
-            />
+          {propertyData.imagePaths.map((image, index) => (
+            <button key={index} onClick={() => { setShowModal(true); setSelectedImage(image.image); }}>
+              <Image
+                src={image.path}
+                alt={`description_of_image_${index}`}
+                width="40"
+                height="10"
+              />
+            </button>
           ))}
-
+          <Image
+            src={propertyData.imagePathsLastImage}
+            alt={`description_of_image_ ${propertyData.imagePaths.length}`}
+            width="40"
+            height="10"
+          />
+          {showModal ? (
+            <>
+              <ImageModal imageSrc={selectedImage} closeModal={() => setShowModal(false)} />
+            </>
+          ) : null}
         </div>
+
         <div className="font-semibold text-3xl mt-3">
           Kr. {propertyData.price}{" "}
         </div>
@@ -113,7 +129,7 @@ function Property() {
           <p className="text-2xl font-semibold">Ansvalig mægler</p>
           <div className="flex border border-gray-200 h-auto p-8">
             <div className="flex">
-              <div className="flex flex-col w-3/5 relative">
+              <div className="flex flex-col w-3/5 relative z-10">
                 <Image
                   src={agentData.image}
                   alt="description_of_image"

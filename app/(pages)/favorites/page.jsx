@@ -31,10 +31,10 @@ function Favorites() {
         </div>
 
         {/* separator */}
-        <Separator className="bg-gray-300 w-full h-[0.05rem] my-5" />
+        <Separator className="bg-gray-300 w-full h-[0.05rem] mt-5 mb-10" />
 
         {/* favourite properties */}
-        <div className="flex flex-wrap gap-7 justify-between pb-24">
+        <div className="flex flex-wrap gap-10 justify-between pb-24">
           {propertiesData.map((property, index) => (
             <FavouritePropertyCard key={index} property={property} />
           ))}

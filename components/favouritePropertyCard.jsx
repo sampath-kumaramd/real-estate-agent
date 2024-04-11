@@ -33,15 +33,13 @@ export default function FavouritePropertyCard({ property, index }) {
             <p className="text-lg">{property.address}</p>
             <div className="flex gap-1">
               <p className="font-bold text-lg">{property.type} . </p>
-              <p className="text-lg">Ejerudgift :{property.price} kr </p>
+              <p className="text-lg">Ejerudgift :{String(property.price).substring(0, 5)} kr </p>
             </div>
           </div>
           <div className="flex flex-col w-[25rem]">
             <div className="flex w-full gap-10">
               <div className="flex gap-5">
-                <div
-                  className={`h-7 w-7 ${property.letterBG} justify-center items-center flex text-white font-bold`}
-                >
+                <div style={{ backgroundColor: property.letterBG }} className={`h-7 w-7 justify-center items-center flex text-white font-bold`}>
                   {property.energyLable}
                 </div>
                 <div className="flex text-base pt-1">

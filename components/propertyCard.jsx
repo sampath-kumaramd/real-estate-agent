@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -42,17 +42,19 @@ export default function PropertyCard({ property, index }) {
               </button>
             </div>
           </div>
-          <div className="flex flex-col gap-2 p-5">
+          <div className="flex flex-col gap-2 p-5 space-y-2">
             <p className="font-bold text-xl pt-5">{property.name}</p>
             <p className="text-lg">{property.address}</p>
             <div className="flex gap-1">
               <p className="font-bold text-lg">{property.type} . </p>
-              <p className="text-lg">Ejerudgift :{property.price} kr </p>
+              <p className="text-lg">Ejerudgift :{String(property.price).substring(0, 5)} kr </p>
             </div>
-            <Separator />
-            <div className="flex justify-between">
+            <div className="my-2">
+              <Separator />
+            </div>
+            <div className="flex justify-between pb-2">
               <div className="flex gap-5">
-              <div className={`h-7 w-7 ${property.letterBG} justify-center items-center flex text-white font-bold`}>
+                <div style={{ backgroundColor: property.letterBG }} className={`h-7 w-7 justify-center items-center flex text-white font-bold`}>
                   {property.energyLable}
                 </div>
                 <div className="flex text-sm pt-1">

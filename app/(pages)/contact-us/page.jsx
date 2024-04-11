@@ -37,7 +37,7 @@ function ContactUs() {
                 <div className="text-[1.25rem] font-bold text-black">
                   Ring til os
                 </div>
-                <div className="text-[1.2rem] ">+45 7070 4000</div>
+                <div className="text-[1.2rem] ">++45 7070 4000</div>
               </div>
             </div>
             <div className="w-[20rem] bg-gray-300 h-[0.1rem] mx-10" />
@@ -79,10 +79,10 @@ function ContactUs() {
           </div>
         </div>
       </div>
-      <div className="w-full pt-8">
+      <div className="w-full pt-20">
         <iframe
           width="100%"
-          height="300"
+          height="500"
           src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=St%C3%A6ndertorvet%2078,%204000%20Roskilde,%20Denmark+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
         />
       </div>

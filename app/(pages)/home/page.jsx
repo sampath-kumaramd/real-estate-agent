@@ -19,14 +19,15 @@ function HomePage() {
       <div className="h-auto">
         {/* hero image section */}
         <div className="relative flex items-center justify-center">
-          <Image
-            src="/assets/Hero.png"
-            alt="description_of_image"
-            width="1920"
-            height="10"
-          />
-          <div className="absolute z-10 text-[3rem] text-white font-bold">
-            Søg efter din drømmebolig
+          <div className="relative w-screen h-[70vh] flex items-center justify-center text-center">
+            <Image
+              src="/assets/Hero.png"
+              alt="description_of_image"
+              fill="responsive"
+            />
+            <div className="absolute z-10 bottom-[26rem] text-center text-[3rem] text-white font-bold">
+              Søg efter din drømmebolig
+            </div>
           </div>
           <div className="flex flex-col absolute z-10 bottom-[11rem] w-[55rem] h-auto bg-white p-6">
             <div className="text-lg font-semibold gap-1">
@@ -139,15 +140,15 @@ function HomePage() {
               ))}
             </div>
             <div className="flex w-full items-center justify-center mt-10">
-            <Link href="property-list">
-            <Button
-                type="submit"
-                className="w-48 rounded bg-[#162A41] h-16 text-[1.1rem]"
-              >
-                Se alle boliger
-              </Button>
-            </Link>
-              
+              <Link href="property-list">
+                <Button
+                  type="submit"
+                  className="w-48 rounded bg-[#162A41] h-16 text-[1.1rem]"
+                >
+                  Se alle boliger
+                </Button>
+              </Link>
+
             </div>
           </div>
         </div>

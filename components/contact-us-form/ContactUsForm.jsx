@@ -32,7 +32,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 
-export default function ContactUsForm({isAgant}) {
+export default function ContactUsForm({ isAgant }) {
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -129,7 +129,7 @@ export default function ContactUsForm({isAgant}) {
           )}
           <Button
             type="submit"
-            className="w-48 rounded bg-[#162A41] h-16 text-[1.1rem]"
+            className="w-48 rounded bg-[#162A41] h-16 text-[1.1rem] !mt-8"
           >
             Send besked
           </Button>

@@ -25,7 +25,7 @@ function Agent() {
                 width="280"
                 height="200"
               />
-              <div className="flex absolute z-10 bottom-48 bg-[#162A41] w-28 h-10 p-3 justify-between">
+              <div className="flex absolute z-10 bottom-52 bg-[#162A41] w-28 h-10 p-3 justify-between">
                 <SocialMedia />
               </div>
             </div>
